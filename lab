@@ -1,0 +1,5 @@
+function showMessage (text)
+{
+    return(text);
+}
+showMessage (’Hello’);
