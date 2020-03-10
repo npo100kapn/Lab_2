@@ -1,5 +1,7 @@
-function showMessage (text)
-{
-    return(text);
-}
-showMessage (’Hello’);
+    function Sum (a, b)
+    {
+        b = 100;
+        return (a+b);
+    }
+
+Sum (3);
