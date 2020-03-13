@@ -1,5 +1,4 @@
-function returnFirstArgument(arg) 
-{
-    return(arg)
+function defaultParameterValue(a, b = 100) {
+    return a+b;
 }
-returnFirstArgument('Hello, World!')
+console.log(defaultParameterValue(17));
