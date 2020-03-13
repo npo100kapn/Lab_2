@@ -1,12 +1,11 @@
-function returnFnResult() 
-{
-    a = func ()
-    return (a)
-}
-function func ()
-{
-    return (3 + 2)
+function bindFunction(F, a, b) {
+    F = F.bind(null, a, b);
+    return F();
 }
 
-console.log(returnFnResult())
+function Func (v = 7,c = 12)
+{
+    return (v+c)
+}
 
+console.log(bindFunction(Func, 2, 3))
