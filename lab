@@ -1,4 +1,13 @@
-function defaultParameterValue(a, b = 100) {
-    return a+b;
+function returnArgumentsArray(Len){
+	var mass=[];
+	for(var i=0;i<Len;i++) {
+		mass[i]=i + 1;
+	}
+	return mass;
 }
-console.log(defaultParameterValue(17));
+var length=prompt('Введите длину','');
+var array=returnArgumentsArray(length);
+for(var i=0;i<length;i++) {
+	console.log(array[i]);
+}
+
