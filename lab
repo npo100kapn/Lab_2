@@ -1,16 +1,19 @@
-function reduce(array, fn, initial) {
-	let i = 0;
-    	let result = initial || array[i++];
-    	while (i < array.length) {
-        	result = fn(result, array[i], i, array);
-        	i++;
-    	}
-    	console.log (result); 
+function slice(array, from = 0, to = array.length) {
+    const res = [];
+    
+    if (to < 0) {
+        to = array.length + to;
+    }
+    if (from < 0) {
+        from = array.length + from;
+    }
+    for (let i = from; i < to; i++) {
+        if(array[i] !== undefined) {
+            res.push(array[i])
+        }
+    }
+    console.log (res);
 }
 
 let arr = [3, 5, 6, 2];
-function funcx (sum, currentEntry) {
-        return sum + currentEntry;
-}
-    
-reduce(arr, funcx, 2);
+slice(arr,0,3);
