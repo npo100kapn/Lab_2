@@ -1,17 +1,16 @@
-function map(array, fn) {
-	let res = [];
-	for(let i = 0; i< array.length;i++){
-		item = fn (array[i]);
-		res.push(item);
-	}
-	console.log (res);
+function reduce(array, fn, initial) {
+	let i = 0;
+    	let result = initial || array[i++];
+    	while (i < array.length) {
+        	result = fn(result, array[i], i, array);
+        	i++;
+    	}
+    	console.log (result); 
 }
 
-function funcx (a){
-	return (a.toUpperCase());
+let arr = [3, 5, 6, 2];
+function funcx (sum, currentEntry) {
+        return sum + currentEntry;
 }
-
-let arr = ["Hello", "word"];
-map(arr, funcx);
-
-Array (1,3,5,8,7);
+    
+reduce(arr, funcx, 2);
