@@ -1,19 +1,15 @@
-function slice(array, from = 0, to = array.length) {
-    const res = [];
-    
-    if (to < 0) {
-        to = array.length + to;
-    }
-    if (from < 0) {
-        from = array.length + from;
-    }
-    for (let i = from; i < to; i++) {
-        if(array[i] !== undefined) {
-            res.push(array[i])
-        }
-    }
-    console.log (res);
+function deleteProperty(obj, prop){
+	if (obj.hasOwnProperty (prop)){
+		delete obj[prop];
+		console.log ('Delete');
+	}else {
+		console.log ('Error');
+	}
 }
 
-let arr = [3, 5, 6, 2];
-slice(arr,0,3);
+var Student = new Object();
+Student.name ="Le}{A";
+Student.age = "22";
+
+deleteProperty (Student, "age");
+console.log(Student)
