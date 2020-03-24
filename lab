@@ -1,11 +1,11 @@
-function bindFunction(F, a, b) {
-    F = F.bind(null, a, b);
-    return F();
+function forEach (array, fn){
+	for(let i = 0; i< array.length;i++)
+		fn(array[i]);
 }
 
-function Func (v = 7,c = 12)
-{
-    return (v+c)
+function funcx (a){
+	console.log(a);
 }
 
-console.log(bindFunction(Func, 2, 3))
+let arr = ["Hello", "world"];
+forEach (arr, funcx);
