@@ -1,9 +1,9 @@
-function deleteProperty(obj, prop){
+function hasProperty(obj, prop){
 	if (obj.hasOwnProperty (prop)){
-		delete obj[prop];
-		console.log ('Delete');
-	}else {
-		console.log ('Error');
+		console.log ('true');
+	}else 
+	{
+		console.log('false');
 	}
 }
 
@@ -11,5 +11,5 @@ var Student = new Object();
 Student.name ="Le}{A";
 Student.age = "22";
 
-deleteProperty (Student, "age");
-console.log(Student)
+hasProperty (Student, "age");
+hasProperty (Student, "got");
