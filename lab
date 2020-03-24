@@ -1,15 +1,11 @@
-function hasProperty(obj, prop){
-	if (obj.hasOwnProperty (prop)){
-		console.log ('true');
-	}else 
-	{
-		console.log('false');
-	}
+function getEnumProps(obj){
+	let a ;
+	a = Object.keys(obj);
+	console.log (a);
 }
 
 var Student = new Object();
 Student.name ="Le}{A";
 Student.age = "22";
 
-hasProperty (Student, "age");
-hasProperty (Student, "got");
+getEnumProps(Student);
